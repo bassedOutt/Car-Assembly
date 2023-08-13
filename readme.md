@@ -12,7 +12,7 @@ The Multithreaded Car Assembly Application is designed to showcase the practical
 To build and run the application, follow these steps:
 
 1. Clone the repository <br>
-``git clone https://github.com/your-username/multithreaded-car-assembly.git``
+``git clone https://github.com/bassedOutt/Car-Assembly.git``
 2. Build the project ``mvn clean package``
 3. Run the application ``mvn javafx: run``
 
