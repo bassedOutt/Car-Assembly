@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="program.mainFormController.MainFormController">
+    <children>
+        <MenuBar prefHeight="85.0" prefWidth="800.0" VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openConfigurationFile" text="Open…" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #000314;">
+                    <children>
+                        <TableView fx:id="bodyTable" layoutX="137.0" layoutY="259.0" prefHeight="200.0" prefWidth="245.0" stylesheets="@../styles/style.css">
+                            <columns>
+                                <TableColumn fx:id="bodyId" prefWidth="75.0" text="ID" />
+                                <TableColumn fx:id="bodyType" prefWidth="75.0" text="ТИП" />
+                                <TableColumn fx:id="bodyData" prefWidth="91.2000732421875" text="ЧАС" />
+                            </columns>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                        </TableView>
+                        <TableView fx:id="engineTable" layoutX="489.0" layoutY="68.0" prefHeight="200.0" prefWidth="245.0" stylesheets="@../styles/style.css">
+                            <columns>
+                                <TableColumn fx:id="engineId" prefWidth="75.0" text="ID" />
+                                <TableColumn fx:id="engineType" prefWidth="75.0" text="ТИП" />
+                                <TableColumn fx:id="engineData" prefWidth="91.2000732421875" text="ЧАС" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="accessoryTable" layoutX="837.0" layoutY="259.0" prefHeight="200.0" prefWidth="245.0" stylesheets="@../styles/style.css">
+                            <columns>
+                                <TableColumn fx:id="accessoryId" prefWidth="75.0" text="ID" />
+                                <TableColumn fx:id="accessoryType" prefWidth="75.0" text="ТИП" />
+                                <TableColumn fx:id="accessoryData" prefWidth="91.2000732421875" text="ЧАС" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="carTable" layoutX="489.0" layoutY="465.0" prefHeight="200.0" prefWidth="245.0" stylesheets="@../styles/style.css">
+                            <columns>
+                                <TableColumn fx:id="carId" prefWidth="75.0" text="ID" />
+                                <TableColumn fx:id="carType" prefWidth="75.0" text="ТИП" />
+                                <TableColumn fx:id="carData" prefWidth="91.2000732421875" text="ЧАС" />
+                            </columns>
+                        </TableView>
+                        <Label layoutX="231.0" layoutY="221.0" text="КУЗОВИ" textFill="#016d91">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                        <Label layoutX="592.0" layoutY="31.0" text="ДВИГУНИ" textFill="#016d91">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                        <Label layoutX="924.0" layoutY="221.0" text="АКСЕСУАРИ" textFill="#016d91">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                        <Label layoutX="526.0" layoutY="432.0" text="ГОТОВА ПРОДУКЦІЯ" textFill="#016d91">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Slider fx:id="carBody" blockIncrement="1.0" depthTest="ENABLE" layoutX="148.0" layoutY="467.0" max="5.0" min="1.0" prefHeight="38.0" prefWidth="210.0" style="-fx-background-color: none;" stylesheets="@../styles/style.css" value="1.0">
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Slider>
+                  <Label fx:id="carAccesoiresLabel" layoutX="945.0" layoutY="450.0" text="1" textFill="#345c7d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="carEngineLabel" layoutX="604.0" layoutY="268.0" text="1" textFill="#345c7d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="carBodyLabel" layoutX="255.0" layoutY="450.0" text="1" textFill="#345c7d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Slider fx:id="carEngine" blockIncrement="1.0" depthTest="ENABLE" layoutX="504.0" layoutY="299.0" max="5.0" min="1.0" prefHeight="38.0" prefWidth="210.0" style="-fx-background-color: none;" stylesheets="@../styles/style.css" value="1.0">
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Slider>
+                  <Slider fx:id="carAccesoires" blockIncrement="1.0" depthTest="ENABLE" layoutX="848.0" layoutY="467.0" max="5.0" min="1.0" prefHeight="38.0" prefWidth="210.0" style="-fx-background-color: none;" stylesheets="@../styles/style.css" value="1.0">
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Slider>
+                  <Label fx:id="completeGoodsLabel" layoutX="604.0" layoutY="672.0" text="1" textFill="#345c7d">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Slider fx:id="completeGoods" blockIncrement="1.0" depthTest="ENABLE" layoutX="504.0" layoutY="693.0" max="5.0" min="1.0" prefHeight="38.0" prefWidth="210.0" style="-fx-background-color: none;" stylesheets="@../styles/style.css" value="1.0">
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Slider>
+                  <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="173.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../body.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="33.0" fitWidth="30.0" layoutX="549.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../engine.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="33.0" fitWidth="30.0" layoutX="886.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../accessories.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="99.0" layoutX="765.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../arrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="99.0" layoutX="590.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+                     <image>
+                        <Image url="@../arrow.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="99.0" layoutX="407.0" layoutY="449.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../arrow.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="192.0" layoutY="505.0" text="ШВИДКІСТЬ РОБОТИ" textFill="#016d91">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="544.0" layoutY="735.0" text="ШВИДКІСТЬ РОБОТИ" textFill="#016d91">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="543.0" layoutY="337.0" text="ШВИДКІСТЬ РОБОТИ" textFill="#016d91">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="882.0" layoutY="505.0" text="ШВИДКІСТЬ РОБОТИ" textFill="#016d91">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
